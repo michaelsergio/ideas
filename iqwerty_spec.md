@@ -173,13 +173,14 @@ Apologies
 ===========
 Since I'm dealing with the brutal field of internalization, I apologize
 for any mistakes, insults, or omissions to this document.
-I am an Ugly American Programmer [americafyea] and intend to insult 
+I am an Ugly American Programmer [america] and intend to insult 
 everyone equally.  
 
 
 References
 =============
-[americafyea](http://www.codinghorror.com/blog/2009/03/the-ugly-american-programmer.html)
-[currency](http://en.wikipedia.org/wiki/Currency_(typography))
-[surrogate](http://en.wikipedia.org/wiki/Unicode_input)
-[apl](http://en.wikipedia.org/wiki/APL_(programming_language))
+[america]: http://www.codinghorror.com/blog/2009/03/the-ugly-american-programmer.html)
+[apl]: http://en.wikipedia.org/wiki/APL_(programming_language))
+[currency]: http://en.wikipedia.org/wiki/Currency_(typography))
+[surrogate]: http://en.wikipedia.org/wiki/Unicode_input)
+
