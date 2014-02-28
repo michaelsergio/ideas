@@ -26,4 +26,6 @@ Another tool should let me set the icon.
 set-icon noicon [ICON_NAME]
 ```
 If ICON_NAME not set display curses app selector.
+
+## References
 [unicode-icons](http://www.fileformat.info/info/unicode/block/miscellaneous_symbols_and_pictographs/utf8test.htm)
