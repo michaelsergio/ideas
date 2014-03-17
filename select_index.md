@@ -30,3 +30,9 @@ ls | sindex
 > vi `sindex 2`
 turns into 
 > vi b.txt
+
+# Flags
+
+Get components based on last lines formats rather than by lines
+--list ['org.apache.cordova', 'a.b.c']
+--csv a,b,c,d,
