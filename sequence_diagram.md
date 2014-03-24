@@ -46,3 +46,12 @@ SVG, PNG, and PDF
 SVG is probably the easisest.
 With that I should be able to serialize to PNG.
 PDF if I need to.
+
+Styles
+----------
+CSS Styling for boxes.
+Minimal Boxes
+UML Style
+Colors
+Start Actor at top (for existing objects)  or inline (for creating new objects)
+
