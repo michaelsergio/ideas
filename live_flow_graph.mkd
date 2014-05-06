@@ -1,0 +1,40 @@
+Live Flog
+=================
+A live FLOw Graph tool for use while coding
+
+Nutshell
+---------
+* Based on live coding in an editor
+* Matches fn braces {} and submits text to parser
+* Parse into DOT graph file. Collapses similiar lines.
+* Leaves comments as mouse over effect.
+* Support at least C, Java, and Go
+* Python support optional but possibly tricky.
+
+Command Line tool
+--------------------
+
+    > liveflog --port=8080 --input=8081
+    Now running server at http://localhost:8080
+
+Implementation Notes
+-----------------------
+Probably going to build it in Go
+* Open input port.
+* On input read:
+   * Parse Lang for structure
+   * (keywords: while, for, if, switch, {})
+   * internal structure: comments, prototypes, break
+* Generate internal graph data type with metadata.
+
+* On output port, render temp html file. 
+* AJAX update for tempfile url and cache the etag.
+* Poll for updates to etag.
+* The etag can just be the filename.
+
+* On close, cleanup temp files.
+
+* Write vim plugin to trigger.
+* Maybe sublime plugin for fun.
+
+
