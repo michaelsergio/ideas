@@ -1,0 +1,67 @@
+Semantic Highlighting in Vim
+======================================
+
+This is based on the following idea.
+https://medium.com/programming-ideas-tutorial-and-experience/3a6db2743a1e
+http://brooks.io/syntax-highlight/
+
+Currently I already use vim/ides with the same procedure explictily. 
+I click on a word(asterisk in vim) to make the highlighting come up.
+This will make the process implicit.
+
+So far most implementation rely on a deep understanding of the programming
+language. For example, there exists a Lua plugin for semantic highlighting.
+
+What I will do will be much more generic.
+
+Rules
+===========
+Keywords
+---------------
+If it is a keyword as defined by the function do not highlight.
+Yes, this is an inversion of the normal procedure for code highlighting.
+The idea is the more it repeats, the less meaning full it is.
+Maybe specifying a color to differentiate from the 'less-common' rule is needed.
+
+less-common
+--------------
+A multiset stores the count of every token used in the document.
+In simpler terms: I store a count for each (space-separated) non-highlighted
+token. For example: a word in a highlighted string is not a token.
+Numbers are probably not tokens (configurable?)
+Words that are uncommon are pretty useless to be highlighted and are just a
+waste of space.
+
+more-common
+-------------
+A 'threshold' parameter is defined (let's default to two).
+Any token with a count above a certain threshold is assigned a color from the
+color mapping function.
+
+color mapping function
+-------------------------
+"color mapping function" := CMF: word -> color
+
+On the site listed, it defined the CMF as such:
+
+    LexicalCMF = words are assigned color based on starting characters.
+
+Similar variable names are defined to similar colors.
+
+That doesn't sound like a great property to me.
+I would rather have tokens have distinct colors near by.
+  
+   RandomCMF = words are assigned a color based on a random distribution.
+
+I think this seems like a more sensible scheme as is decreases the chances of
+similarity in colors. 
+
+Hmm, but randomness usually sucks. So lets try a collapsing hash function.
+
+    HashCMF = Hash(word)
+
+The important part is being able to map to a readable color range.
+Theres a lot of literature about that already.
+
+
+
